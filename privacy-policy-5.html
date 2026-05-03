@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Daily Snapshots</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a2e; --muted: #5a5a7a; --accent: #2563eb;
+      --bg: #fafaf8; --border: #e8e8f0;
+      --warn-bg: #fff7ed; --warn-border: #f97316; --warn-text: #9a3412;
+      --note-bg: #eff6ff; --note-border: #2563eb; --note-text: #1e40af;
+      --radius: 10px; --sidebar-w: 210px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-size: clamp(14px,1.5vw,16px); background: var(--bg); color: var(--ink); line-height: 1.8; }
+    .topbar { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0.7rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+    .topbar-brand svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .topbar-brand span { font-family: 'Lora', serif; font-weight: 700; font-size: clamp(0.85rem,2vw,1rem); color: var(--ink); white-space: nowrap; }
+    .topbar-links { display: flex; gap: clamp(0.8rem,2vw,1.5rem); flex-shrink: 0; }
+    .topbar-links a { font-size: clamp(0.75rem,1.5vw,0.85rem); font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .topbar-links a:hover { color: var(--accent); }
+    .topbar-links a.active { color: var(--accent); font-weight: 600; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d2b55 55%, #1e3a5f 100%); padding: clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem) clamp(1.5rem,4vw,3rem); text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(124,58,237,0.18) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(37,99,235,0.18) 0%, transparent 60%); pointer-events: none; }
+    .hero-badge { display: inline-block; font-size: clamp(0.65rem,1.2vw,0.72rem); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #a5b4fc; background: rgba(165,180,252,0.12); border: 1px solid rgba(165,180,252,0.3); border-radius: 99px; padding: 0.28rem 0.9rem; margin-bottom: 1rem; }
+    .hero h1 { font-family: 'Lora', serif; font-size: clamp(1.5rem,4vw,2.6rem); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 0.7rem; }
+    .hero-sub { font-size: clamp(0.8rem,1.8vw,0.9rem); color: rgba(255,255,255,0.6); margin-bottom: 0.3rem; }
+    .hero-date { font-size: clamp(0.75rem,1.5vw,0.82rem); color: rgba(255,255,255,0.38); }
+    .layout { max-width: calc(var(--sidebar-w) + 680px + 5rem); margin: 0 auto; padding: clamp(1.5rem,4vw,3rem) clamp(1rem,3vw,2rem) 5rem; display: grid; grid-template-columns: var(--sidebar-w) 1fr; gap: clamp(1.5rem,3vw,3rem); align-items: start; }
+    .toc { position: sticky; top: 58px; font-size: clamp(0.72rem,1.3vw,0.8rem); }
+    .toc-title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+    .toc ul { list-style: none; }
+    .toc li { margin-bottom: 0.05rem; }
+    .toc a { display: block; padding: 0.28rem 0.6rem; color: var(--muted); text-decoration: none; border-left: 2px solid transparent; border-radius: 0 4px 4px 0; transition: all 0.18s; line-height: 1.4; }
+    .toc a:hover { color: var(--accent); border-left-color: var(--accent); background: var(--note-bg); }
+    .toc a.active { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
+    .content { min-width: 0; }
+    .content h2 { font-family: 'Lora', serif; font-size: clamp(1rem,2.5vw,1.2rem); font-weight: 700; color: var(--ink); margin: 2.2rem 0 0.65rem; padding-top: 1rem; border-top: 1px solid var(--border); scroll-margin-top: 70px; line-height: 1.35; }
+    .content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .content h3 { font-size: clamp(0.88rem,2vw,0.98rem); font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.45rem; scroll-margin-top: 70px; }
+    .content p { margin-bottom: 0.85rem; color: #2d2d45; font-size: clamp(0.85rem,1.6vw,0.92rem); word-break: break-word; overflow-wrap: break-word; }
+    .content ul { margin: 0.4rem 0 0.9rem 0; padding-left: clamp(1rem,3vw,1.4rem); }
+    .content ul li { margin-bottom: 0.4rem; font-size: clamp(0.85rem,1.6vw,0.92rem); color: #2d2d45; word-break: break-word; }
+    .content ul li::marker { color: var(--accent); }
+    .warn-box { background: var(--warn-bg); border-left: 4px solid var(--warn-border); border-radius: 0 var(--radius) var(--radius) 0; padding: 0.9rem 1.1rem; margin: 1.1rem 0; }
+    .warn-box p { color: var(--warn-text) !important; font-size: clamp(0.82rem,1.5vw,0.88rem) !important; margin: 0 !important; line-height: 1.6; font-weight: 600; }
+    .note-box { background: var(--note-bg); border-left: 4px solid var(--note-border); border-radius: 0 var(--radius) var(--radius) 0; padding: 0.9rem 1.1rem; margin: 1.1rem 0; }
+    .note-box p { color: var(--note-text) !important; font-size: clamp(0.82rem,1.5vw,0.88rem) !important; margin: 0 !important; font-style: italic; line-height: 1.6; }
+    .table-wrap { overflow-x: auto; margin: 0.8rem 0 1.4rem; border-radius: var(--radius); border: 1px solid var(--border); -webkit-overflow-scrolling: touch; }
+    table { width: 100%; border-collapse: collapse; font-size: clamp(0.78rem,1.4vw,0.85rem); }
+    thead tr { background: #eef2ff; }
+    thead th { padding: clamp(0.5rem,1.5vw,0.75rem) clamp(0.7rem,2vw,1rem); text-align: left; font-weight: 600; color: var(--ink); border-bottom: 2px solid var(--border); }
+    tbody tr { border-top: 1px solid var(--border); }
+    tbody tr:nth-child(even) { background: #f8f8fc; }
+    tbody td { padding: clamp(0.5rem,1.5vw,0.7rem) clamp(0.7rem,2vw,1rem); vertical-align: top; color: #2d2d45; line-height: 1.6; word-break: break-word; }
+    footer { border-top: 1px solid var(--border); padding: clamp(1.2rem,3vw,2rem); text-align: center; font-size: clamp(0.75rem,1.4vw,0.8rem); color: var(--muted); }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    #backTop { position: fixed; bottom: clamp(1rem,3vw,2rem); right: clamp(1rem,3vw,2rem); background: var(--accent); color: #fff; border: none; border-radius: 50%; width: 38px; height: 38px; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(37,99,235,0.35); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; text-decoration: none; }
+    #backTop.visible { opacity: 1; }
+    @media (max-width: 640px) { .layout { grid-template-columns: 1fr; padding: 1.2rem 1rem 4rem; } .toc { display: none; } }
+    @media (max-width: 400px) { thead th, tbody td { font-size: 0.72rem; padding: 0.4rem 0.55rem; } }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <a class="topbar-brand" href="#"><svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="26" height="26" rx="7" fill="#1a1a2e"/>
+      <circle cx="13" cy="13" r="6" stroke="#7c3aed" stroke-width="1.5"/>
+      <circle cx="13" cy="13" r="2.5" fill="#2563eb"/>
+      <line x1="13" y1="4" x2="13" y2="7" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="13" y1="19" x2="13" y2="22" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round"/>
+    </svg><span>Daily Snapshots</span></a>
+  <div class="topbar-links">
+    <a href="terms-of-use.html">Terms of Use</a>
+    <a href="privacy-policy.html" class="active">Privacy Policy</a>
+  </div>
+</nav>
+<header class="hero">
+  <div class="hero-badge">Legal · Privacy Policy</div>
+  <h1>Privacy Policy</h1>
+  <p class="hero-sub">Daily Snapshots · [YOUR NAME / TRADING NAME]</p>
+  <p class="hero-date">Effective: [DATE] &nbsp;·&nbsp; Last updated: [DATE]</p>
+</header>
+<div class="layout">
+  <aside class="toc"><div class="toc-title">On this page</div><ul>
+    <li><a href="#s1">1. Who We Are</a></li>
+    <li><a href="#s2">2. Scope</a></li>
+    <li><a href="#s3">3. What Data We Collect</a></li>
+    <li><a href="#s4">4. How We Collect Data</a></li>
+    <li><a href="#s5">5. How We Use Your Data</a></li>
+    <li><a href="#s6">6. Sub-Processors</a></li>
+    <li><a href="#s7">7. When We Share Data</a></li>
+    <li><a href="#s8">8. International Transfers</a></li>
+    <li><a href="#s9">9. Data Retention</a></li>
+    <li><a href="#s10">10. Data Security</a></li>
+    <li><a href="#s11">11. Your Privacy Rights</a></li>
+    <li><a href="#s12">12. Children's Privacy</a></li>
+    <li><a href="#s13">13. Cookies &amp; Tracking</a></li>
+    <li><a href="#s14">14. Push Notifications</a></li>
+    <li><a href="#s15">15. Persistent Device ID</a></li>
+    <li><a href="#s16">16. Jurisdiction Disclosures</a></li>
+    <li><a href="#s17">17. PDPO PICS Statement</a></li>
+    <li><a href="#s18">18. AI &amp; Automated Processing</a></li>
+    <li><a href="#s19">19. Changes to This Policy</a></li>
+    <li><a href="#s20">20. Contact Us</a></li>
+</ul></aside>
+  <main class="content">
+<div class="note-box"><p>PRIVACY AT A GLANCE — This summary is for convenience only. Please read the full policy below.</p></div>
+<div class="table-wrap"><table>
+  <thead><tr><th>What we collect</th><th>What we do with it</th></tr></thead>
+  <tbody>
+    <tr><td>Account info (name, email)</td><td>Operate your account and provide the service</td></tr>
+    <tr><td>Photos and journal entries you create</td><td>Store and display them to you only — never used for AI training</td></tr>
+    <tr><td>Device identifiers (persistent)</td><td>Fraud prevention only — not for advertising</td></tr>
+    <tr><td>Payment data (via RevenueCat)</td><td>Process subscriptions and purchases</td></tr>
+    <tr><td>Usage analytics</td><td>Improve app performance and features</td></tr>
+    <tr><td>Push notification tokens</td><td>Send reminders and service alerts (with your consent)</td></tr>
+    <tr><td>Do we sell your data?</td><td><strong>NO</strong> — never sold or traded to third parties</td></tr>
+    <tr><td>Do we use your photos for AI training?</td><td><strong>NO</strong></td></tr>
+    <tr><td>Can you delete your data?</td><td><strong>YES</strong> — Settings &gt; Account &gt; Delete Account, or email us</td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="s1">1. WHO WE ARE AND HOW TO CONTACT US</h2>
+<p>Daily Snapshots is a daily photo journaling application developed and operated by <strong>[YOUR NAME / TRADING NAME]</strong>, an individual developer based in Hong Kong SAR ("Developer," "we," "us," or "our"). We are the data controller in respect of your personal data processed through the Application.</p>
+<p><strong>Data Controller:</strong> [YOUR NAME / TRADING NAME]<br>
+<strong>Contact / Privacy &amp; Legal Enquiries:</strong> [YOUR CONTACT EMAIL]<br>
+<strong>Jurisdiction of Establishment:</strong> Hong Kong Special Administrative Region, People's Republic of China</p>
+<p>We do not have a formal Data Protection Officer (DPO) as we are an individual developer and are not currently required to appoint one under applicable law. All data protection and privacy enquiries should be directed to the contact email above. We will respond to GDPR requests within 30 days and PDPO requests within 40 days.</p>
+
+<h2 id="s2">2. SCOPE OF THIS PRIVACY POLICY</h2>
+<p>This Privacy Policy applies to all personal data collected, processed, and stored in connection with your use of the Daily Snapshots mobile application (iOS), any associated web application, and all related services (collectively, the "Application"). It does not apply to third-party websites or services linked from the Application.</p>
+<p>By using the Application, you confirm that you have read and understood this Privacy Policy. Your continued use of the Application constitutes your acknowledgement of these practices. Where we rely on consent as our lawful basis for processing (as indicated in Section 3), we will obtain that consent through a specific consent mechanism rather than inferring it from your use of the Application. If you do not agree with how we handle your personal data, you must not use the Application.</p>
+
+<h2 id="s3">3. WHAT PERSONAL DATA WE COLLECT AND WHY</h2>
+<p>We collect only the personal data necessary for the operation and improvement of the Application. The table below sets out each category, the specific items collected, the purpose, and our lawful basis under GDPR:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Data Category</th><th>Specific Data Items</th><th>Purpose</th><th>GDPR Lawful Basis</th></tr></thead>
+  <tbody>
+    <tr><td>Account Data</td><td>Name (or username), email address, password (hashed)</td><td>Create and manage your account; authenticate you</td><td>Art. 6(1)(b) — Contract</td></tr>
+    <tr><td>User Content</td><td>Photos, images, captions, journal entries, tags</td><td>Store and display your daily snapshots to you</td><td>Art. 6(1)(b) — Contract</td></tr>
+    <tr><td>Payment &amp; Billing Data</td><td>Subscription status, transaction IDs, purchase history (via RevenueCat — we do not store raw card data)</td><td>Process payments, manage subscriptions, prevent fraud</td><td>Art. 6(1)(b) — Contract</td></tr>
+    <tr><td>Device &amp; Technical Data</td><td>Device type, OS version, app version, IP address, crash logs, performance data</td><td>Diagnose technical issues, improve app stability</td><td>Art. 6(1)(f) — Legitimate Interest</td></tr>
+    <tr><td>Persistent Device ID</td><td>iCloud Key-Value Storage identifier (survives reinstall)</td><td>Fraud prevention; enforce trial and account policies</td><td>Art. 6(1)(f) — Legitimate Interest</td></tr>
+    <tr><td>Push Notification Token</td><td>Device push notification token (via OneSignal)</td><td>Send daily reminders and service notifications</td><td>Art. 6(1)(a) — Consent (separate opt-in)</td></tr>
+    <tr><td>Usage Analytics</td><td>Feature usage, session duration, in-app actions (anonymised where possible)</td><td>Understand how the app is used; improve features</td><td>Art. 6(1)(f) — Legitimate Interest</td></tr>
+    <tr><td>Support Communications</td><td>Emails, messages, feedback you send to us</td><td>Respond to support requests and complaints</td><td>Art. 6(1)(b) — Contract / Art. 6(1)(c) — Legal Obligation</td></tr>
+  </tbody>
+</table></div>
+<div class="note-box"><p>We do NOT collect: precise GPS location, contacts, microphone audio, health data, or any data beyond what is listed above. We do NOT use your photos for AI model training. We do NOT sell, rent, or trade your personal data.</p></div>
+
+<h2 id="s4">4. HOW WE COLLECT YOUR DATA</h2>
+<h3>4.1 Data You Provide Directly</h3>
+<p>We collect data you actively provide when you register for an account, capture and upload photos or journal entries, make a purchase or subscription, contact us for support, or provide feedback.</p>
+<h3>4.2 Data Collected Automatically</h3>
+<p>When you use the Application, we and our service providers automatically collect certain technical data including device identifiers, IP address, OS version, app version, crash reports, and usage patterns via our infrastructure partners (Base44, Supabase, MongoDB).</p>
+<h3>4.3 Data From Third-Party Providers</h3>
+<p>We receive limited data from RevenueCat (subscription status, transaction IDs) and Apple (App Store purchase verification). We do not receive raw payment card details — these are handled entirely by RevenueCat and Apple.</p>
+
+<h2 id="s5">5. HOW WE USE YOUR PERSONAL DATA</h2>
+<p>We use your personal data only for the purposes disclosed in this Privacy Policy, including to:</p>
+<ul>
+  <li>Provide, operate, maintain, and improve the Application and its features;</li>
+  <li>Process payments, manage your subscription, and send billing-related communications;</li>
+  <li>Authenticate your identity and maintain the security of your account;</li>
+  <li>Send push notifications where you have separately consented;</li>
+  <li>Prevent fraud, abuse, and enforce our terms of use and account policies;</li>
+  <li>Diagnose technical problems and monitor application performance;</li>
+  <li>Respond to your support requests, feedback, and communications; and</li>
+  <li>Comply with our legal obligations under applicable law.</li>
+</ul>
+<p>We will not use your personal data for any incompatible purpose without first notifying you and, where required, obtaining your consent.</p>
+
+<h2 id="s6">6. THIRD-PARTY SERVICE PROVIDERS AND SUB-PROCESSORS</h2>
+<p>We work with the following third-party service providers who process your personal data on our behalf:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Provider</th><th>Role / Purpose</th><th>Privacy Policy URL</th></tr></thead>
+  <tbody>
+    <tr><td>Base44 / Wix.com Ltd.</td><td>App hosting, backend, and API infrastructure</td><td>base44.com | wix.com/about/privacy</td></tr>
+    <tr><td>MongoDB, Inc.</td><td>Cloud database storage</td><td>mongodb.com/legal/privacy-policy</td></tr>
+    <tr><td>Supabase, Inc.</td><td>Database and authentication services</td><td>supabase.com/privacy</td></tr>
+    <tr><td>Despia</td><td>Native iOS app runtime and App Store deployment</td><td>despia.io (refer to their policy)</td></tr>
+    <tr><td>RevenueCat, Inc.</td><td>In-app purchase and subscription management</td><td>revenuecat.com/privacy</td></tr>
+    <tr><td>OneSignal, Inc.</td><td>Push notification delivery</td><td>onesignal.com/privacy_policy</td></tr>
+    <tr><td>Google AdMob (Google LLC)</td><td>Advertising services (if enabled)</td><td>policies.google.com/privacy</td></tr>
+    <tr><td>Apple Inc.</td><td>App Store distribution, in-app purchase verification, iCloud KV storage</td><td>apple.com/legal/privacy</td></tr>
+  </tbody>
+</table></div>
+<p>We do not authorise any sub-processor to use your personal data for their own purposes beyond what is necessary to provide their services to us.</p>
+
+<h2 id="s7">7. WHEN WE SHARE YOUR DATA</h2>
+<p>We share your personal data only in the following limited circumstances:</p>
+<ul>
+  <li>With sub-processors listed in Section 6, for the specific purposes described;</li>
+  <li>With law enforcement or government authorities where required by applicable law, court order, or legal process;</li>
+  <li>In connection with a merger, acquisition, or sale of substantially all of our assets, where we will notify you and require the acquirer to honour this Privacy Policy; and</li>
+  <li>With your explicit consent, for any purpose not covered above.</li>
+</ul>
+<p>We do <strong>NOT</strong> sell, rent, lease, or otherwise commercially exploit your personal data. We do <strong>NOT</strong> share your photos or journal content with any third party for marketing, advertising, or AI training purposes.</p>
+
+<h2 id="s8">8. INTERNATIONAL DATA TRANSFERS</h2>
+<p>Your personal data may be transferred to and processed in countries other than your country of residence, including the United States and other jurisdictions where our sub-processors operate.</p>
+<p>For transfers from the EEA, UK, or Switzerland to countries not deemed adequate by the European Commission, we rely on our sub-processors to maintain appropriate transfer safeguards, which may include Standard Contractual Clauses (SCCs), adequacy decisions, or other lawful transfer mechanisms as maintained by each provider. Details are available in each sub-processor's privacy policy listed in Section 6. For transfers from Hong Kong, we comply with cross-border data transfer requirements under the PDPO.</p>
+
+<h2 id="s9">9. DATA RETENTION</h2>
+<p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by applicable law:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Data Type</th><th>Retention Period</th></tr></thead>
+  <tbody>
+    <tr><td>Account data (name, email)</td><td>For the duration of your account, plus 30 days after deletion request</td></tr>
+    <tr><td>Photos and journal entries</td><td>For the duration of your account; deleted within 30 days of account deletion</td></tr>
+    <tr><td>Payment and billing records</td><td>7 years from the date of transaction (required by HK law and accounting standards)</td></tr>
+    <tr><td>Persistent device identifier</td><td>For the duration of your account; may persist in iCloud KV until manually cleared</td></tr>
+    <tr><td>Usage analytics (anonymised)</td><td>Up to 24 months from collection in identifiable form. Irreversibly anonymised aggregated data may be retained beyond this period solely for service improvement</td></tr>
+    <tr><td>Support communications</td><td>3 years from the date of the communication</td></tr>
+    <tr><td>Push notification tokens</td><td>Until you withdraw consent or uninstall the Application</td></tr>
+    <tr><td>Crash logs and technical data</td><td>90 days from collection</td></tr>
+  </tbody>
+</table></div>
+<p>Upon expiry of the applicable retention period, we will securely delete or irreversibly anonymise your personal data within 30 days, subject to legal retention obligations.</p>
+<div class="note-box"><p>How to delete your account: Navigate to Settings &gt; Account &gt; Delete Account in the Application, or email [YOUR CONTACT EMAIL]. Account deletion is irreversible. Note that cancelling a paid subscription does not delete your account — these are separate actions.</p></div>
+
+<h2 id="s10">10. DATA SECURITY</h2>
+<p>We implement industry-standard technical and organisational measures to protect your personal data, including:</p>
+<ul>
+  <li>Encryption of data in transit using TLS 1.2 or higher;</li>
+  <li>Encryption of data at rest where supported by our infrastructure providers;</li>
+  <li>Password hashing using industry-standard algorithms (we do not store plaintext passwords);</li>
+  <li>Access controls limiting data access to what is necessary for operation; and</li>
+  <li>Use of secure, reputable cloud infrastructure providers (Base44/Wix, Supabase, MongoDB).</li>
+</ul>
+<p>No method of transmission over the internet is 100% secure. If you believe your account has been compromised, contact us immediately at [YOUR CONTACT EMAIL].</p>
+<h3>10.1 Data Breach Response</h3>
+<p>In the event of a personal data breach, we will: contain the breach promptly; notify the Hong Kong PCPD where required under the PDPO; notify affected EU/EEA users and supervisory authorities within 72 hours where required under GDPR Article 33; and notify affected users without undue delay where the breach is likely to result in a high risk to their rights and freedoms.</p>
+
+<h2 id="s11">11. YOUR PRIVACY RIGHTS</h2>
+<p>Depending on your jurisdiction, you have certain rights regarding your personal data:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Your Right</th><th>Who It Applies To</th><th>How to Exercise</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Right to Access</strong> — obtain a copy of your personal data</td><td>All users (GDPR Art. 15; PDPO; CCPA)</td><td>Email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>Right to Rectification</strong> — correct inaccurate or incomplete data</td><td>All users (GDPR Art. 16; PDPO)</td><td>Email [YOUR CONTACT EMAIL] or update in-app</td></tr>
+    <tr><td><strong>Right to Erasure</strong> — request deletion of your data</td><td>EU/EEA users (GDPR Art. 17); all users where feasible</td><td>Email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>Right to Restriction</strong> — restrict processing in certain circumstances</td><td>EU/EEA users (GDPR Art. 18)</td><td>Email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>Right to Data Portability</strong> — receive your data in machine-readable format</td><td>EU/EEA users (GDPR Art. 20)</td><td>Email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>Right to Object</strong> — object to processing based on legitimate interests</td><td>EU/EEA users (GDPR Art. 21)</td><td>Email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>Right to Withdraw Consent</strong> — where processing is consent-based</td><td>All users</td><td>Toggle in app settings or email [YOUR CONTACT EMAIL]</td></tr>
+    <tr><td><strong>CCPA/CPRA Rights</strong> — know, delete, opt-out of sale</td><td>California residents</td><td>Email [YOUR CONTACT EMAIL] — we do not sell data</td></tr>
+    <tr><td><strong>Right to Non-Discrimination</strong></td><td>California residents (CCPA)</td><td>Automatic — we do not discriminate</td></tr>
+    <tr><td><strong>PDPO Access &amp; Correction</strong></td><td>All users (HK PDPO)</td><td>Email [YOUR CONTACT EMAIL] — response within 40 days</td></tr>
+  </tbody>
+</table></div>
+<p>We will respond to all valid requests within 30 days (GDPR) or 40 days (PDPO). We may ask you to verify your identity before processing your request.</p>
+<h3>11.1 Right to Lodge a Complaint</h3>
+<p>You have the right to lodge a complaint with:</p>
+<ul>
+  <li>The Hong Kong PCPD: <strong>www.pcpd.org.hk</strong></li>
+  <li>Your local EU/EEA data protection supervisory authority;</li>
+  <li>The UK ICO: <strong>ico.org.uk</strong>; or</li>
+  <li>The California CPPA: <strong>cppa.ca.gov</strong>.</li>
+</ul>
+
+<h2 id="s12">12. CHILDREN'S PRIVACY</h2>
+<p>The Application is not directed at children under 13 (or under 16 in the EEA). We do not knowingly collect personal data from children under these ages without verified parental consent. If you are a parent or guardian and believe your child has provided personal data without appropriate consent, contact us at [YOUR CONTACT EMAIL] and we will delete such data promptly upon verification.</p>
+
+<h2 id="s13">13. COOKIES, TRACKING, AND DO-NOT-TRACK</h2>
+<h3>13.1 Cookies and Similar Technologies</h3>
+<p>Prior to placing any non-essential cookies on your device through our web interface, we will present you with a cookie consent notice allowing you to accept or decline non-essential cookies. You may change your preferences at any time via the cookie settings link in our web interface footer.</p>
+<ul>
+  <li><strong>Essential / strictly necessary:</strong> Required for the Application to function (e.g. session authentication tokens). Placed without requiring consent as they are necessary for core functionality and cannot be disabled.</li>
+  <li><strong>Performance / analytics:</strong> Anonymised data collection to understand usage patterns. Requires your consent via the cookie consent notice.</li>
+  <li><strong>Advertising (AdMob):</strong> If advertising features are enabled, Google AdMob may use device identifiers to serve contextual advertisements. You may opt out through iOS Settings &gt; Privacy &amp; Security &gt; Apple Advertising.</li>
+</ul>
+<h3>13.2 App Tracking Transparency (iOS)</h3>
+<p>In compliance with Apple's ATT framework, we will request your explicit permission before tracking your activity across other companies' apps and websites for advertising purposes. You may grant or revoke this permission at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
+<h3>13.3 Do-Not-Track Signals</h3>
+<p>Our web interface does not currently alter its data collection or use practices in response to Do-Not-Track (DNT) signals from browsers. For the iOS Application, we honour your iOS privacy settings including Limit Ad Tracking and App Tracking Transparency. We do not engage in cross-app tracking without your explicit ATT consent.</p>
+
+<h2 id="s14">14. PUSH NOTIFICATIONS</h2>
+<p>We use OneSignal to deliver push notifications. Push notifications are optional — you will be asked to consent when you first use the Application. You may withdraw consent at any time by disabling notifications for Daily Snapshots in your device Settings &gt; Notifications, or by contacting us at [YOUR CONTACT EMAIL]. Withdrawing consent does not affect your ability to use the core features of the Application.</p>
+
+<h2 id="s15">15. PERSISTENT DEVICE IDENTIFIER</h2>
+<p>The Application uses iCloud Key-Value Storage (iOS) to store a persistent device identifier used exclusively for fraud prevention and abuse detection — specifically to prevent circumvention of free trial limitations and multi-account creation.</p>
+<p>This identifier is not linked to your name or email address, is not shared with advertising networks, and is not used for tracking or profiling. Our lawful basis is our legitimate interest (GDPR Article 6(1)(f)) in protecting the commercial integrity of the Application.</p>
+<p>If you wish to request deletion or reset of this identifier, please contact us at [YOUR CONTACT EMAIL]. We will assess such requests individually, balancing your rights against our fraud prevention interests.</p>
+
+<h2 id="s16">16. JURISDICTION-SPECIFIC DISCLOSURES</h2>
+<h3>16.1 European Union / EEA (GDPR)</h3>
+<p>For users in the EU/EEA, we process your personal data in accordance with Regulation (EU) 2016/679 (GDPR). Our lawful bases for processing are set out in Section 3. Where we rely on legitimate interests (Article 6(1)(f)), you have the right to object to such processing at any time.</p>
+<p>We are not currently required to appoint an EU Representative under GDPR Article 27, as we are an individual developer processing personal data on an occasional and limited basis without large-scale processing of special category data. We will keep this assessment under review and appoint an EU Representative if our processing activities expand to a scale where the Article 27 exemption no longer applies. If you are an EU/EEA supervisory authority, please contact us at [YOUR CONTACT EMAIL].</p>
+<h3>16.2 California (CCPA / CPRA / CalOPPA)</h3>
+<p>For California residents:</p>
+<ul>
+  <li>We do not sell or share your personal information for cross-context behavioural advertising.</li>
+  <li>We do not use sensitive personal information beyond the purposes specified in this Privacy Policy.</li>
+  <li>You have the right to know, delete, correct, and opt out of sale/sharing. Email [YOUR CONTACT EMAIL] — we will respond within 45 days.</li>
+  <li>You will not be discriminated against for exercising your CCPA/CPRA rights.</li>
+  <li>CalOPPA disclosure: Our web interface does not currently respond to Do-Not-Track signals (see Section 13.3).</li>
+</ul>
+<h3>16.3 Hong Kong (Personal Data (Privacy) Ordinance, Cap. 486)</h3>
+<p>We comply with the six Data Protection Principles (DPPs) under the PDPO:</p>
+<ul>
+  <li><strong>DPP1 (Purpose &amp; Collection):</strong> We collect only data necessary for the purposes stated in this Policy, lawfully and fairly.</li>
+  <li><strong>DPP2 (Accuracy &amp; Retention):</strong> We keep your data accurate and delete it when no longer needed (see Section 9).</li>
+  <li><strong>DPP3 (Use):</strong> We use your data only for the purposes for which it was collected or a directly related purpose.</li>
+  <li><strong>DPP4 (Security):</strong> We implement appropriate technical and organisational security measures (see Section 10).</li>
+  <li><strong>DPP5 (Openness):</strong> This Privacy Policy discloses our data practices. Updated copies are always available at [YOUR PRIVACY POLICY URL].</li>
+  <li><strong>DPP6 (Access &amp; Correction):</strong> Contact us at [YOUR CONTACT EMAIL]. We will respond within 40 days.</li>
+</ul>
+<h3>16.4 United Kingdom (UK GDPR / DPA 2018)</h3>
+<p>For UK users, we process your personal data in accordance with the UK GDPR as incorporated into UK law by the Data Protection Act 2018. You may lodge a complaint with the UK ICO at <strong>ico.org.uk</strong>.</p>
+
+<h2 id="s17">17. PERSONAL INFORMATION COLLECTION STATEMENT (PDPO PICS)</h2>
+<ul>
+  <li><strong>Purpose of Collection:</strong> Your personal data is collected for account management, content storage, payment processing, fraud prevention, and service improvement.</li>
+  <li><strong>Classes of Transferees:</strong> Your data may be transferred to the sub-processors listed in Section 6.</li>
+  <li><strong>Right of Access and Correction:</strong> Requests should be directed to [YOUR CONTACT EMAIL].</li>
+  <li><strong>Voluntary Provision:</strong> Provision of your personal data is voluntary. However, failure to provide certain data (e.g. account registration data) will prevent you from using the Application.</li>
+</ul>
+
+<h2 id="s18">18. AI AND AUTOMATED PROCESSING</h2>
+<p><strong>Your photos are NOT used to train AI models.</strong> We do not use any photos, journal entries, or User Content to train, fine-tune, or improve any AI or machine learning model, whether operated by us or any third party.</p>
+<p><strong>No automated decision-making with legal effect.</strong> We do not make automated decisions about you that produce legal effects or similarly significantly affect you.</p>
+
+<h2 id="s19">19. CHANGES TO THIS PRIVACY POLICY</h2>
+<p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last Updated" date, notify you via the Application and by email where we hold your address, and where required by law obtain your consent before implementing changes affecting how we process your data. Your continued use of the Application after the effective date of the revised Policy constitutes your acknowledgement of the changes.</p>
+
+<h2 id="s20">20. HOW TO CONTACT US</h2>
+<p><strong>[YOUR NAME / TRADING NAME]</strong><br>
+Email: <strong>[YOUR CONTACT EMAIL]</strong><br>
+Attention: Privacy &amp; Legal Enquiries</p>
+<p>We aim to respond to all privacy-related enquiries within 14 calendar days, and to formally respond to all data rights requests within 30 days (GDPR) or 40 days (PDPO).</p>
+</main>
+</div>
+<footer>
+  <p>© [YEAR] [YOUR NAME / TRADING NAME]. All rights reserved.</p>
+  <p style="margin-top:0.4rem;">
+    <a href="terms-of-use.html">Terms of Use</a> &nbsp;·&nbsp;
+    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="mailto:[YOUR CONTACT EMAIL]">Contact</a>
+  </p>
+</footer>
+<a id="backTop" class="back-top" href="#" aria-label="Back to top">↑</a>
+<script>
+  const sections = document.querySelectorAll('.content h2');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const backTop  = document.getElementById('backTop');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-8% 0px -82% 0px' });
+  sections.forEach(s => { if (s.id) obs.observe(s); });
+  window.addEventListener('scroll', () => { backTop.classList.toggle('visible', window.scrollY > 400); });
+</script>
+</body>
+</html>
